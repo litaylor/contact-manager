@@ -1,0 +1,22 @@
+.row div {
+  border: thin black solid;
+  background-color: white;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.affix + .container-fluid {
+     padding-top: 128px;
+  }
+
+.contact-list {
+  /*padding-top: 20px;*/
+}
+
+.contact {
+  padding: 20px 0px;
+}
