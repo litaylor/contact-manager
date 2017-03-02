@@ -5,6 +5,7 @@
   }
 
   $db = new PDO('mysql:host=localhost;dbname=contacts;charset=utf8mb4','root','root');
+  $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>

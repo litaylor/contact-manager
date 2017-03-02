@@ -1,15 +1,9 @@
 <?php
   include 'header.php';
-  $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
+  include 'top.php'
 ?>
 
-<body>
-  <div class="container-fluid" data-spy="affix" data-offset-top='0'>
-    <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <h1>My contacts <span class="text-muted">(<?= count($contacts); ?>)</span></h1>
-      </div>
-    </div>
+
     <div class="row">
       <a href="add.php">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
