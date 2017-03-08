@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,800');
+
+body {
+  font-family: 'Merriweather Sans';
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: #2C3E50;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #E74C3C;
+}
+
+.contact{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.entry {
+  color: #2C3E50;
+}
+
 .row div {
   /*border: thin black solid;*/
   background-color: white;
@@ -19,4 +46,34 @@
 
 .contact {
   padding: 20px 0px;
+}
+
+h3.cancel {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+a.phone {
+  color: black;
+}
+
+
+.footer, .footer .footer {
+  background-color: gray;
+}
+
+.hoverglyph .glyphicon{
+  display: none;
+}
+
+.hoverglyph:hover .glyphicon {
+  display: inline;
+}
+
+.hovertext .text{
+  display: none;
+}
+
+.hovertext:hover .text {
+  display: inline;
 }

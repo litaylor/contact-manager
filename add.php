@@ -6,21 +6,24 @@
     <div class="row">
       <div class="col-xs-12 col-md-6 col-md-offset-3">
         <h3>New contact</h3>
+        <a href="index.php">
+          <button class="btn btn-warning">Cancel</button>
+        </a>
       </div>
     </div>
   </div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <form class="contact_form" action="" method="POST">
+        <form class="contact_form" action="/create.php" method="POST">
           <div class="name_group">
             <div class="form-group contact_firstname">
               <label for="contact_firstname">First name:</label>
-              <input type="text" name="contact_firstname" id="contact_firstname" value="">
+              <input type="text" name="contact_firstname" id="contact_firstname" value="" placeholder="First name">
             </div>
             <div class="form-group contact_lastname">
               <label for="contact_lastname">Last name:</label>
-              <input type="text" name="contact_lastname" id="contact_lastname" value="">
+              <input type="text" name="contact_lastname" id="contact_lastname" value="" placeholder="Last name">
             </div>
           </div>
           <div class="form-group contact_title">
@@ -97,14 +100,19 @@
               	<option value="WY">Wyoming</option>
               </select>
             </div>
+            <div class="form-group contact_zip">
+              <label for="contact_zip">ZIP:</label>
+              <input type="text" name="contact_zip" id="contact_zip" value="">
+            </div>
+            <div class="form-group contact_notes">
+              <label for="contact_notes">Notes:</label>
+              <textarea rows="5" name="contact_notes" id="contact_notes"></textarea>
+            </div>
           </div>
           <button class="btn btn-primary">Add contact</button>
         </form>
       </div>
     </div>
-    <div style="width:100%; background-color:blue; height:900px;">
 
-    </div>
-  </div>
-</body>
-</html>
+
+<?php include 'footer.php' ?>
