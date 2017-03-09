@@ -13,11 +13,11 @@
   </head>
 
 <body>
-  <div class="container-fluid" data-spy="affix" data-offset-top='0'>
+  <div class="container-fluid headerWrap" data-spy="affix" data-offset-top='0'>
     <div class="row">
       <a href="index.php">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <h1>My contacts <span class="text-muted">(<?= count($contacts); ?>)</span></h1>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 header">
+          <h1>My contacts <sup class="text-muted"><?= count($contacts); ?></sup></h1>
         </div>
       </a>
     </div>

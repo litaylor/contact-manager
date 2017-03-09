@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,800');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400italic,800');
 
 body {
   font-family: 'Merriweather Sans';
@@ -16,6 +16,10 @@ h2 {
   color: #E74C3C;
 }
 
+.text-muted {
+  color: #bed5ea;
+}
+
 .contact{
   font-size: 18px;
   line-height: 24px;
@@ -26,7 +30,6 @@ h2 {
 }
 
 .row div {
-  /*border: thin black solid;*/
   background-color: white;
 }
 
@@ -37,26 +40,39 @@ h2 {
 }
 
 .affix + .container-fluid {
-     padding-top: 128px;
+     padding-top: 131px;
   }
 
 .contact-list {
   /*padding-top: 20px;*/
 }
 
-.contact {
-  padding: 20px 0px;
+.contact a div {
+  padding: 20px 15px;
 }
 
-h3.cancel {
-  display: inline-block;
-  padding-right: 20px;
+.headerWrap {
+  border-bottom: 1px solid #2C3E50;
+}
+
+.header {
+  /*padding-left: 10px;*/
+}
+
+.headerWrap, .header:hover{
+  background-color: white;
 }
 
 a.phone {
-  color: black;
+  /*color: black;*/
 }
 
+.contact-list a:hover div {
+  background-color: #bed5ea;
+  -webkit-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
 
 .footer, .footer .footer {
   background-color: gray;
@@ -66,7 +82,7 @@ a.phone {
   display: none;
 }
 
-.hoverglyph:hover .glyphicon {
+.plain .hoverglyph:hover .glyphicon {
   display: inline;
 }
 
@@ -76,4 +92,155 @@ a.phone {
 
 .hovertext:hover .text {
   display: inline;
+}
+
+.plain input, .plain select, .plain textarea, .plain button, .plain .contact_state, .plain .formchoices {
+  display: none;
+}
+
+.plain .form-group, .plain label, .plain h3, .plain h4 {
+  margin: 0;
+}
+
+.plain h3, .plain h4 {
+  line-height: 1.5;
+}
+
+.plain h3, .plain h4 {
+  display: inline;
+}
+
+.plain .name_group, .plain .address_group, .plain .contact_title, .plain .contact_phone {
+  margin: 10px 0px;
+}
+
+.editing label {
+  display: none;
+}
+
+.editbutton {
+  color: #bed5ea;
+}
+
+.options {
+  display: none;
+}
+
+.options div {
+  padding: 10px 15px;
+}
+
+.options .optionedit {
+  color: #2C3E50;
+  border: 1px solid #bed5ea;
+}
+
+.options .optionedit:hover {
+  background-color: #bed5ea;
+}
+
+.optiondelete {
+  color: #E74C3C;
+  border: 1px solid #E74C3C;
+}
+
+a:hover .optiondelete {
+  color: white;
+  background-color: #E74C3C;
+  -webkit-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.editcontainer {
+  margin-top: 20px;
+  -webkit-transition: margin-top 300ms linear;
+  -ms-transition: margin-top 300ms linear;
+  transition: margin-top 300ms linear;
+}
+
+.affix + .editcontainer {
+  margin-top: 80px;
+}
+
+a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+.hoverglyph, .expand, h3, h4, p {
+  cursor: pointer;
+}
+
+.plain .hoverglyph:hover{
+  border-bottom: 1px solid #bed5ea;
+}
+
+.editing .name_group, .editing .address_group, .editing .contact_title, .editing .contact_phone, .editing .contact_notes {
+  padding: 20px 0px;
+}
+
+input {
+  border-width: 0px 0px 1px;
+  border-color: #bed5ea;
+  font-size: 18px;
+  padding: 5px;
+  outline: none;
+  width: 100%;
+}
+
+select {
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #bed5ea;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #bed5ea;
+  outline:none;
+}
+
+input:focus {
+  background-color: #bed5ea;
+}
+
+h4.title {
+  font-weight: 300;
+  font-style: italic;
+}
+
+p.notes {
+  font-weight: 300;
+}
+
+.update {
+  width: 100%;
+  background-color: #2C3E50;
+  color: #bed5ea;
+  border: none;
+  padding: 10px 20px;
+}
+
+.update:hover {
+  color: #2C3E50;
+  background-color: #bed5ea;
+  -webkit-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.cancel {
+  width: 100%;
+  color: #E74C3C;
+  border: 1px solid #E74C3C;
+  padding: 10px 20px;
+}
+
+a:hover .cancel {
+  color: white;
+  background-color: #E74C3C;
+  -webkit-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
 }

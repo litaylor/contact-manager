@@ -8,54 +8,98 @@
   $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
-<!-- hey <?php echo $contact['firstname']; ?> -->
 
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <h2 class="cancel">
-      <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn btn-danger btn-xs btn-delete">[x]</a>
-      Edit contact
-    </h2>
-    <a href="index.php">
-      <button class="btn btn-warning">Cancel</button>
-    </a>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h2>
+        <?php echo $contact['firstname']; ?> <?php echo $contact['lastname']; ?>
+        <span class="glyphicon glyphicon-option-vertical pull-right expand" aria-hidden="true"></span>
+      </h2>
+    </div>
+  </div>
+  <div class="row options">
+    <div class="col-xs-6 col-sm-3 col-sm-offset-3 text-center">
+      <a href="/delete.php?id=<?= $contact['id']; ?>">
+        <div class="optiondelete text-center">
+          Delete <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+      <a href="#">
+        <div class="optionedit text-center" id="optionedit">
+          Edit <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
-</div>
-<div class="container-fluid">
+<div class="container-fluid editcontainer">
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <form class="contact_form" action="/update.php" method="POST">
+    <form class="contact_form plain" action="/update.php" method="POST">
+      <div class="row formchoices">
+        <div class="col-xs-6 text-center">
+          <a href="index.php">
+            <div class="cancel">
+              Cancel <span class="glyphicon glyphicon-arrow-left"></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-6">
+          <button class="update">
+            Update <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </div>
+      </div>
       <input type="hidden" name="id" id="contact_id" value="<?php echo $contact['id'] ?>" >
       <div class="name_group">
-        <div class="form-group contact_firstname">
-          <label for="contact_firstname">First name:</label>
+        <div class="form-group contact_firstname hoverglyph">
+          <label for="contact_firstname">
+            <h3>
+              <?php echo $contact['firstname'] ?>
+              <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span>
+            </h3>
+
+          </label>
           <input type="text" name="contact_firstname" id="contact_firstname" value="<?php echo $contact['firstname'] ?>" placeholder="First name">
         </div>
-        <div class="form-group contact_lastname">
-          <label for="contact_lastname">Last name:</label>
+        <div class="form-group contact_lastname hoverglyph">
+          <label for="contact_lastname">
+            <h3><?php echo $contact['lastname'] ?> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span></h3>
+          </label>
           <input type="text" name="contact_lastname" id="contact_lastname" value="<?php echo $contact['lastname'] ?>" placeholder="Last name">
         </div>
       </div>
-      <div class="form-group contact_title">
-        <label for="contact_title">Title:</label>
-        <input type="text" name="contact_title" id="contact_title" value="<?php echo $contact['title'] ?>">
+      <div class="form-group contact_title hoverglyph">
+        <label for="contact_title">
+          <h4 class="title"><?php echo $contact['title'] ?> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span></h4>
+        </label>
+        <input type="text" name="contact_title" id="contact_title" value="<?php echo $contact['title'] ?>" placeholder="Title">
       </div>
-      <div class="form-group contact_phone">
-        <label for="contact_phone">Phone:</label>
-        <input type="text" name="contact_phone" id="contact_phone" value="<?php echo $contact['phone'] ?>">
+      <div class="form-group contact_phone hoverglyph">
+        <label for="contact_phone">
+          <h4 class="phone"><?php echo $contact['phone'] ?> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span></h4>
+        </label>
+        <input type="text" name="contact_phone" id="contact_phone" value="<?php echo $contact['phone'] ?>" placeholder="Phone">
       </div>
       <div class="address_group">
-        <div class="form-group contact_address">
-          <label for="contact_address">Street address:</label>
-          <input type="text" name="contact_address" id="contact_address" value="<?php echo $contact['address'] ?>">
+        <div class="form-group contact_address hoverglyph">
+          <label for="contact_address">
+            <h4 class="address"><?php echo $contact['address'] ?></h4> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span>
+          </label>
+          <input type="text" name="contact_address" id="contact_address" value="<?php echo $contact['address'] ?>" placeholder="Address">
         </div>
-        <div class="form-group contact_city">
-          <label for="contact_city">City:</label>
-          <input type="text" name="contact_city" id="contact_city" value="<?php echo $contact['city'] ?>">
+        <div class="form-group contact_city hoverglyph">
+          <label for="contact_city">
+            <h4 class="address"><?php echo $contact['city'] ?>, <?php echo $contact['state'] ?></h4> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span>
+          </label>
+          <input type="text" name="contact_city" id="contact_city" value="<?php echo $contact['city'] ?>" placeholder="City">
         </div>
         <div class="form-group contact_state">
-          <label for="contact_state">State:</label>
+          <label for="contact_state">
+
+          </label>
           <select name="contact_state" id="contact_state" value="<?php echo $contact['state'] ?>">
             <option value=""> </option>
             <option value="AL"<?= ($contact['state'] == 'AL') ? ' selected' : '' ?>>Alabama</option>
@@ -111,16 +155,33 @@
             <option value="WY"<?= ($contact['state'] == 'WY') ? ' selected' : '' ?>>Wyoming</option>
           </select>
         </div>
-        <div class="form-group contact_zip">
-          <label for="contact_zip">ZIP:</label>
-          <input type="text" name="contact_zip" id="contact_zip" value="<?php echo $contact['zip'] ?>">
+        <div class="form-group contact_zip hoverglyph">
+          <label for="contact_zip">
+            <h4 class="zip"><?php echo $contact['zip'] ?></h4> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span>
+          </label>
+          <input type="text" name="contact_zip" id="contact_zip" value="<?php echo $contact['zip'] ?>" placeholder="ZIP">
         </div>
       </div>
-      <div class="form-group contact_notes">
-        <label for="contact_notes">Notes:</label>
-        <textarea rows="5" name="contact_notes" id="contact_notes"><?php echo $contact['notes'] ?></textarea>
+      <div class="form-group contact_notes hoverglyph">
+        <label for="contact_notes">
+          <p class="notes"><?php echo $contact['notes'] ?> <span class="glyphicon glyphicon-pencil editbutton" aria-hidden="true"></span></p>
+        </label>
+        <textarea rows="5" name="contact_notes" id="contact_notes" placeholder="Notes"><?php echo $contact['notes'] ?></textarea>
       </div>
-      <button class="btn btn-primary">Update contact</button>
+      <div class="row formchoices">
+        <div class="col-xs-6 text-center">
+          <a href="index.php">
+            <div class="cancel">
+              Cancel <span class="glyphicon glyphicon-arrow-left"></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-6">
+          <button class="update">
+            Update <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </div>
+      </div>
     </form>
   </div>
 </div>
