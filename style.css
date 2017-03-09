@@ -75,7 +75,7 @@ a.phone {
 }
 
 .footer, .footer .footer {
-  background-color: gray;
+  /*background-color: gray;*/
 }
 
 .hoverglyph .glyphicon{
@@ -133,10 +133,12 @@ a.phone {
 .options .optionedit {
   color: #2C3E50;
   border: 1px solid #bed5ea;
+  background-color: #bed5ea;
 }
 
 .options .optionedit:hover {
-  background-color: #bed5ea;
+  color: white;
+  background-color: #2C3E50;
 }
 
 .optiondelete {
@@ -167,7 +169,7 @@ a:link, a:hover, a:active, a:visited {
   text-decoration: none;
 }
 
-.hoverglyph, .expand, h3, h4, p {
+.hoverglyph, .expand, h3, h4, .contact_form p {
   cursor: pointer;
 }
 
@@ -232,15 +234,19 @@ p.notes {
 
 .cancel {
   width: 100%;
-  color: #E74C3C;
-  border: 1px solid #E74C3C;
+  color: #9C7737;
+  border: 1px solid #9C7737;
   padding: 10px 20px;
 }
 
 a:hover .cancel {
   color: white;
-  background-color: #E74C3C;
+  background-color: #9C7737;
   -webkit-transition: background-color 150ms linear;
   -ms-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
+}
+
+.contact_form {
+  padding-bottom: 20px;
 }
