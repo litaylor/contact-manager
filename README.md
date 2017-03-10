@@ -9,8 +9,8 @@
    git clone https://github.com/litaylor/contact-manager.git
    ```
 
- 1. Set up a local Apache and SQL server on port :80
+1. Set up a local Apache and SQL server on port :80
 
- 1. Point your browser to localhost:80/
+1. Point your browser to localhost:80/
 
- 1. Enjoy using the web app in your browser!
+1. Enjoy using the web app in your browser!
