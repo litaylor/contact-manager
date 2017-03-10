@@ -2,6 +2,7 @@
   include 'header.php';
   include 'top.php';
   $id = $_GET['id'];
+  // Get specific contact row
   $stmt = $db->prepare('SELECT * from contacts WHERE id = :id LIMIT 1');
   $stmt->bindParam(':id', $id);
   $stmt->execute();
@@ -17,6 +18,7 @@
         </h2>
       </div>
     </div>
+    <!-- Buttons to edit / delete -->
     <div class="row options">
       <div class="col-xs-6 col-sm-3 col-sm-offset-3 text-center">
         <a href="/delete.php?id=<?= $contact['id']; ?>">
@@ -38,6 +40,7 @@
 <div class="container-fluid editcontainer">
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <!-- Begin the form -->
     <form class="contact_form plain" action="/update.php" method="POST">
       <div class="row formchoices">
         <div class="col-xs-6 text-center">

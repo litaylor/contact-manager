@@ -4,5 +4,7 @@
     ini_set('display_errors', '1');
   }
 
+  // Import Database table 'contacts'
+
   $db = new PDO('mysql:host=localhost;dbname=contacts;charset=utf8mb4','root','root');
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

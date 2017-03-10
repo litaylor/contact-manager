@@ -1,5 +1,7 @@
+/* Get Google font */
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400italic,800');
 
+/* Set basic font styles */
 body {
   font-family: 'Merriweather Sans';
 }
@@ -33,9 +35,11 @@ p {
   color: #2C3E50;
 }
 
-.row div {
+.row div:not('.updated') {
   background-color: white;
 }
+
+/* Set sticky header*/
 
 .affix {
   top: 0;
@@ -47,10 +51,6 @@ p {
      padding-top: 131px;
   }
 
-.contact-list {
-  /*padding-top: 20px;*/
-}
-
 .contact a div {
   padding: 20px 15px;
 }
@@ -59,18 +59,11 @@ p {
   border-bottom: 1px solid #2C3E50;
 }
 
-.header {
-  /*padding-left: 10px;*/
-}
-
 .headerWrap, .header:hover{
   background-color: white;
 }
 
-a.phone {
-  /*color: black;*/
-}
-
+/* Hover states */
 .contact-list a:hover div {
   background-color: #bed5ea;
   -webkit-transition: background-color 150ms linear;
@@ -93,6 +86,8 @@ a.phone {
 .hovertext:hover .text {
   display: inline;
 }
+
+/* Form styles */
 
 .plain input, .plain select, .plain textarea, .plain button, .plain .contact_state, .plain .formchoices {
   display: none;
@@ -402,6 +397,8 @@ ol {
   color: white;
 }
 
+/* Mobile display */
+
 @media (max-width:768px) {
   .back {
     top:auto;
@@ -422,4 +419,17 @@ ol {
 
 .idcolumn {
   padding-left: 10px;
+}
+
+.updatemark {
+  display: none;
+}
+
+.updated, .updated div {
+  background-color: #BED5EA;
+  transition: background-color 0.5s;
+}
+
+.updated .updatemark {
+  display: inline;
 }

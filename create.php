@@ -15,12 +15,12 @@
     ':title' => $_POST['contact_title'],
     ':address' => $_POST['contact_address'],
     ':city' => $_POST['contact_city'],
-    ':state' => $_POST['contact_state'],
+    ':state' => array_key_exists('contact_state', $_POST) ? $_POST['contact_state'] : ' ',
     ':phone' => $_POST['contact_phone'],
     ':zip' => $_POST['contact_zip'],
     ':notes' => $_POST['contact_notes']
   ));
   $id = $db->lastInsertId();
 
-  header('Location:index.php');
+  header('Location:index.php?updated=1&id=' . $id);
  ?>

@@ -1,3 +1,4 @@
+<!-- Get all contacts -->
 <?php $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC); ?>
 
 <!DOCTYPE html>

@@ -13,6 +13,7 @@
   <div class="container-fluid addform">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <!-- Begin the form -->
         <form class="contact_form" action="/create.php" method="POST">
           <div class="name_group">
             <div class="form-group contact_firstname">

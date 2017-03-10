@@ -2,6 +2,7 @@
 
   include 'header.php';
 
+  // Prepare to set row
   $stmt = $db->prepare('UPDATE contacts SET firstname = :firstname, lastname = :lastname, title = :title, phone = :phone, address = :address, city = :city, state = :state, zip = :zip, notes = :notes WHERE id = :id');
 
   $stmt->execute(array(
@@ -17,4 +18,5 @@
     ':notes' => $_POST['contact_notes']
   ));
 
+  // Let browser know which contact has been updated
   header('Location:index.php?updated=1&id=' . $_POST['id']);
