@@ -9,7 +9,7 @@
    git clone https://github.com/litaylor/contact-manager.git
    ```
 
-1. Set up a local Apache and SQL server on port :80
+1. Set up a local Apache and SQL server on port :80. The database name is 'contacts'.
 
 1. Point your browser to localhost:80/
 
