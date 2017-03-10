@@ -1,6 +1,7 @@
 <div class="row footer">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3 footer">
-    <p>Designed by Langston Taylor. | Style Guide</p>
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <p>Designed by Langston Taylor. |
+      <a href="/styleguide/">Style Guide</a></p>
   </div>
 </div>
 </div>

@@ -4,17 +4,14 @@
 ?>
 
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <h3>New contact</h3>
-        <a href="index.php">
-          <button class="btn btn-warning">Cancel</button>
-        </a>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h2>New contact</h2>
       </div>
     </div>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid addform">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
         <form class="contact_form" action="/create.php" method="POST">
           <div class="name_group">
             <div class="form-group contact_firstname">
@@ -28,20 +25,20 @@
           </div>
           <div class="form-group contact_title">
             <label for="contact_title">Title:</label>
-            <input type="text" name="contact_title" id="contact_title" value="">
+            <input type="text" name="contact_title" id="contact_title" value="" placeholder="Title">
           </div>
           <div class="form-group contact_phone">
             <label for="contact_phone">Phone:</label>
-            <input type="text" name="contact_phone" id="contact_phone" value="">
+            <input type="text" name="contact_phone" id="contact_phone" value="" placeholder="Phone">
           </div>
           <div class="address_group">
             <div class="form-group contact_address">
               <label for="contact_address">Street address:</label>
-              <input type="text" name="contact_address" id="contact_address" value="">
+              <input type="text" name="contact_address" id="contact_address" value="" placeholder="Address">
             </div>
             <div class="form-group contact_city">
               <label for="contact_city">City:</label>
-              <input type="text" name="contact_city" id="contact_city" value="">
+              <input type="text" name="contact_city" id="contact_city" value="" placeholder="City">
             </div>
             <div class="form-group contact_state">
               <label for="contact_state">State:</label>
@@ -102,14 +99,27 @@
             </div>
             <div class="form-group contact_zip">
               <label for="contact_zip">ZIP:</label>
-              <input type="text" name="contact_zip" id="contact_zip" value="">
+              <input type="text" name="contact_zip" id="contact_zip" value="" placeholder="ZIP">
             </div>
             <div class="form-group contact_notes">
               <label for="contact_notes">Notes:</label>
-              <textarea rows="5" name="contact_notes" id="contact_notes"></textarea>
+              <textarea rows="5" name="contact_notes" id="contact_notes" placeholder="Notes"></textarea>
             </div>
           </div>
-          <button class="btn btn-primary">Add contact</button>
+          <div class="row">
+            <div class="col-xs-6 text-center">
+              <a href="index.php">
+                <div class="cancel">
+                  Cancel <span class="glyphicon glyphicon-arrow-left"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-6">
+              <button class="update">
+                Create <span class="glyphicon glyphicon-ok"></span>
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     </div>

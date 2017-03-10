@@ -17,4 +17,4 @@
     ':notes' => $_POST['contact_notes']
   ));
 
-  header('Location:index.php?testid=' . $_POST['id']);
+  header('Location:index.php?updated=1&id=' . $_POST['id']);

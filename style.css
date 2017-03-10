@@ -16,6 +16,10 @@ h2 {
   color: #E74C3C;
 }
 
+p {
+  font-weight: 300;
+}
+
 .text-muted {
   color: #bed5ea;
 }
@@ -72,10 +76,6 @@ a.phone {
   -webkit-transition: background-color 150ms linear;
   -ms-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-}
-
-.footer, .footer .footer {
-  /*background-color: gray;*/
 }
 
 .hoverglyph .glyphicon{
@@ -177,7 +177,7 @@ a:link, a:hover, a:active, a:visited {
   border-bottom: 1px solid #bed5ea;
 }
 
-.editing .name_group, .editing .address_group, .editing .contact_title, .editing .contact_phone, .editing .contact_notes {
+.editing .name_group, .editing .address_group, .editing .contact_title, .editing .contact_phone, .editing .contact_notes, .addform .name_group, .addform .address_group, .addform .contact_title, .addform .contact_phone, .addform .contact_notes {
   padding: 20px 0px;
 }
 
@@ -249,4 +249,56 @@ a:hover .cancel {
 
 .contact_form {
   padding-bottom: 20px;
+}
+
+.addform label {
+  display: none;
+}
+
+.footer {
+  border-top: 1px solid #2C3E50;
+  padding: 20px 0px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  border-bottom: 1px solid #bed5ea;
+}
+
+.footer a:link, .footer a:visited {
+  color: #2C3E50;
+}
+
+.footer a:hover, .footer a:active {
+  color: #2C3E50;
+  border-color: #2C3E50;
+}
+
+.style-fontsize * {
+  padding: 0px 0px 20px;
+  cursor: default;
+}
+
+.style-formelements input, textarea {
+  margin: 20px 0px;
+}
+
+.style *:first-child {
+  margin-top:0;
+}
+
+.style .options {
+  display: block;
+}
+
+p.normal {
+  font-weight: 400;
+}
+
+p.lead {
+  font-size: inherit;
+  font-weight: 800;
 }
