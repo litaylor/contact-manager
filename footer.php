@@ -1,7 +1,7 @@
 <div class="row footer">
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
     <p>Designed by Langston Taylor. |
-      <a href="/styleguide/">Style Guide</a></p>
+      <a href="style.html">Style Guide</a></p>
   </div>
 </div>
 </div>
@@ -17,9 +17,14 @@
     })
   });
 
+  $("#optionedit").click(function(){
+    $("#affixWrap").css({
+      "min-height": "192px"
+    });
+  });
+
   $(".plain .hoverglyph, #optionedit").click(function(){
     $(".plain").removeClass("plain").addClass("editing");
-    $(".options").slideToggle();
   });
 
   $(".plain .hoverglyph").click(function(){

@@ -3,9 +3,10 @@
   include 'top.php';
 ?>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <h2>New contact</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <h2>New contact</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -43,7 +44,7 @@
             <div class="form-group contact_state">
               <label for="contact_state">State:</label>
               <select name="contact_state" id="contact_state" value="_">
-                <option value=""> </option>
+                <option value="" disabled selected>State</option>
                 <option value="AL">Alabama</option>
               	<option value="AK">Alaska</option>
               	<option value="AZ">Arizona</option>

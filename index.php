@@ -4,15 +4,16 @@
 ?>
 
 
-    <div class="row">
-      <a href="add.php">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3 header">
-          <h2 class="create">
-            Create
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </h2>
-        </div>
-      </a>
+      <div class="row">
+        <a href="add.php">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3 header">
+            <h2 class="create">
+              Create
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </h2>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
   <div class="container-fluid contact-list">
@@ -22,8 +23,15 @@
           <div class="row contact">
             <a class="hoverglyph" href="/edit.php?id=<?= $contact['id']; ?>">
               <div class="col-xs-9 entry">
-                <span class="">
+                <span>
                   <?= $contact['firstname']; ?> <?= $contact['lastname']; ?>
+                </span>
+                <span class="pull-right idcolumn">
+                  <?= $contact['id']; ?>
+                </span>
+                <br />
+                <h4 class="title">
+                  <?= $contact['city']; ?>, <?= $contact['state']; ?>
                 </span>
               </div>
             </a>

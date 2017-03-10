@@ -9,28 +9,29 @@
 ?>
 
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <h2>
-        <?php echo $contact['firstname']; ?> <?php echo $contact['lastname']; ?>
-        <span class="glyphicon glyphicon-option-vertical pull-right expand" aria-hidden="true"></span>
-      </h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h2>
+          <?php echo $contact['firstname']; ?> <?php echo $contact['lastname']; ?>
+          <span class="glyphicon glyphicon-option-vertical pull-right expand" aria-hidden="true"></span>
+        </h2>
+      </div>
     </div>
-  </div>
-  <div class="row options">
-    <div class="col-xs-6 col-sm-3 col-sm-offset-3 text-center">
-      <a href="/delete.php?id=<?= $contact['id']; ?>">
-        <div class="optiondelete text-center">
-          Delete <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </div>
-      </a>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <a href="#">
-        <div class="optionedit text-center" id="optionedit">
-          Edit <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-        </div>
-      </a>
+    <div class="row options">
+      <div class="col-xs-6 col-sm-3 col-sm-offset-3 text-center">
+        <a href="/delete.php?id=<?= $contact['id']; ?>">
+          <div class="optiondelete text-center">
+            Delete <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <a href="#">
+          <div class="optionedit text-center" id="optionedit">
+            Edit <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

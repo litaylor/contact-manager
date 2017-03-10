@@ -415,3 +415,11 @@ ol {
     line-height: 100px;
   }
 }
+
+#affixWrap {
+  min-height:133px;
+}
+
+.idcolumn {
+  padding-left: 10px;
+}
